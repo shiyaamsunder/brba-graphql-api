@@ -5,6 +5,11 @@
 ---
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/63956643/121493725-ba9db400-c9f5-11eb-9ae3-a34aa7cca251.png)
+
+![image](https://user-images.githubusercontent.com/63956643/121493738-be313b00-c9f5-11eb-93fb-0be45a5d5694.png)
+
+---
 
 ## How to run locally.
 
