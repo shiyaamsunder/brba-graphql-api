@@ -2,10 +2,35 @@ import { gql } from 'apollo-server';
 
 export const typeDefs = gql`
 	type Query {
-		allCharacters(limit: Int): [Character!]!
-		characterById(char_id: ID!): Character
-		charactersByCategory(category: String!): [Character!]!
-		randomCharacter(limit: Int): [Character!]!
+		"""
+		Query to retrieve information from all characters.
+		"""
+		allCharacters("Limits the number of characters." limit: Int): [Character!]!
+
+		"""
+		Query to retrieve a single character by their char_id.
+		"""
+		characterById("Integer value. Ex: 1 or 2" char_id: ID!): Character
+
+		"""
+		Query to retrieve characters based on the category. 'Breaking Bad' or 'Better Call Saul'.
+		"""
+		charactersByCategory(
+			"Only accepts 'Breaking Bad' or 'Better Call Saul'."
+			category: String!
+		): [Character!]!
+
+		"""
+		Query to retrieve a random character.
+		"""
+		randomCharacter(
+			"Takes an integer. If no value provided, returns a single character."
+			limit: Int
+		): [Character!]!
+
+		"""
+		Query to retrieve characters based full name.
+		"""
 		searchCharacterbyFullName(
 			firstName: String!
 			lastName: String!
